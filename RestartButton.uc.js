@@ -15,8 +15,8 @@
   restartButton.classList.add("subviewbutton");
   restartButton.label = "Restart";
   restartButton.setAttribute("oncommand", "(" + restart.toString() + ")()")
-  if(document.getElementById("appMenu-restart-button")) {
-    document.getElementById("appMenu-restart-button").remove();
+  if(PanelMultiView.getViewNode(document, "appMenu-restart-button")) {
+    PanelMultiView.getViewNode(document, "appMenu-restart-button").remove();
   }
-  document.getElementById("appMenu-quit-button2").insertAdjacentElement("afterend", restartButton);
+  PanelMultiView.getViewNode(document, "appMenu-quit-button2").insertAdjacentElement("afterend",restartButton);
 }())
